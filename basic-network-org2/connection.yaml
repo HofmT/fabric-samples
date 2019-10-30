@@ -2,7 +2,7 @@
 name: basic-network
 version: 1.0.0
 client:
-    organization: Org1
+    organization: Org2
     connection:
         timeout:
             peer:
@@ -11,23 +11,23 @@ client:
 channels:
     mychannel:
         orderers:
-        - orderer.example.com
+        - orderer.shard1.com
         peers:
-            peer0.org1.example.com: {}
+            peer0.org2.shard1.com: {}
 organizations:
-    Org1:
-        mspid: Org1MSP
+    Org2:
+        mspid: Org2MSP
         peers:
-        - peer0.org1.example.com
+        - peer0.org2.shard1.com
         certificateAuthorities:
-        - ca.example.com
+        - ca.shard1.com
 orderers:
-    orderer.example.com:
-        url: grpc://localhost:7050
+    orderer.shard1.com:
+        url: grpc://localhost:8050
 peers:
-    peer0.org1.example.com:
-        url: grpc://localhost:7051
+    peer0.org2.shard1.com:
+        url: grpc://localhost:8051
 certificateAuthorities:
-    ca.example.com:
-        url: http://localhost:7054
-        caName: ca.example.com
+    ca.shard1.com:
+        url: http://localhost:8054
+        caName: ca.shard1.com
