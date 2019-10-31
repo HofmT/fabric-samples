@@ -12,7 +12,7 @@ export MSYS_NO_PATHCONV=1
 
 #docker-compose -f docker-compose.yml down
 
-docker-compose -f docker-compose.yml up -d orderer.shard1.com peer0.org2.shard1.com
+docker-compose -f docker-compose.yml up -d orderer.shard1.com peer0.org2.shard1.com cli
 docker ps -a
 
 # wait for Hyperledger Fabric to start

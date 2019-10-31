@@ -18,14 +18,14 @@ organizations:
     Org1:
         mspid: Org1MSP
         peers:
-        - peer0.org1.example.com
+        - peer0.org1.shard0.com
         certificateAuthorities:
         - ca.example.com
 orderers:
-    orderer.example.com:
+    orderer.shard0.com:
         url: grpc://localhost:7050
 peers:
-    peer0.org1.example.com:
+    peer0.org1.shard0.com:
         url: grpc://localhost:7051
 certificateAuthorities:
     ca.example.com:
